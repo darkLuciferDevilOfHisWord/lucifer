@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cheat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <style>
+        .card{
+margin-bottom: 10px;
+        }
+        .head{
+            position: fixed;
+            top: 0;
+            width: 80vw;
+            
+            z-index: 5;
+        }
+        .cont{
+            padding-top: 15vh;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container-fluid cont">
+
+    <div class="m-3 head">
+        <textarea class="form-control" id="search" rows="2" placeholder="Search Question/Answer here..."></textarea>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">1. Consider a scenario in which one parent process has single child process created by  using
+            pid = fork();
+            Then the task to be performed only by the child process should be written as:
+             </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)	if(pid==0) { //specify the task}
+        </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">2. A file named "os.txt" already exists in your system. Suppose the text "An operating  system (OS) is system software that manages computer hardware, software resources,  and provides services for computer programs" is written into it. Open this file for  reading purpose and truncate the size to zero.
+        </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a.	open("os.txt", O_RDONLY | O_TRUNC, 0);
+        </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">3.	Consider a file “F1” having some content already written into it. In order to reposition at the 10th position from the start which of the code will be used.</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d)	n=open("F1",O_RDWR);
+ 
+            lseek(n,10,SEEK_SET); </b>
+        </div>
+    </div>
+    
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">4.	Create a new thread "th_new". Newly created thread executes a non parameterised function named "function_new".</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a)	pthread_create(&th_new, NULL, function_new, NULL);</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">5.	Consider a file named "file" having some content. Code to read 13 characters from it and print all the read characters on screen will be</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a.)
+            char buffer[13]; fd=open("file",O_RDWR); read(fd,buffer,13); write(1,buffer,13);
+            </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">1.	Consider the following code int main()
+            {
+            fork();
+            printf(“Hello World\n”); fork();
+            printf(“Hello World\n”);
+            }
+            How many times Hello World will be printed?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>6</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">2.	Consider the following code int a=5
+            int main()
+            {
+            int p; p=fork();
+            if(p==0){ a+=15;
+            return 0;
+             
+            }
+            else {
+            wait(NULL); printf("Parent:value is=%d",a) return 0;
+            }
+            }
+            What will be the value of ‘a’ printed in parent process?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>5</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">3.	Consider the following code int main()
+            {
+            int fd,n;
+            char buf[40]; fd=open("seeking",O_RDWR); n=lseek(fd,10,SEEK_SET);
+            printf("The cursor is at position %d\n",n);
+            }
+            What is the value printed for ‘n’ in the above code?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>10</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">4.	A file named "test.txt" already exists in your system. Which of the following syntax will
+ 
+            be used to open the file for reading purpose?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a)	open("test.txt", O_RDONLY);</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">5.	Consider a file named "test" with some content in it. Which of the following options will be used to read 10 characters from the file and print all the read characters on screen</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b></b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">6.	Consider the code int main()
+            {
+            char buf[30]; int n;
+            n=read(0,buf,20);
+            printf("The value of n is %d\n",n);
+            }
+            
+            
+            After running the above code, the input to the code is given as “CSE325 CA”. What will be the value of ‘n’ printed?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>10</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">7.	What will be output of the following code? int main()
+            {
+            int p; p=fork(); if(p==0)
+            {
+            printf("The Child\n”);
+            }
+            else
+            {
+             
+            printf(The Parent\n");
+            }
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d)	The process can run in any order. </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">8.	Assume there is file named as “file.txt”. Currently the permission of a file are: read, write execute for user, read for group and no permissions for others. What will be used to set the permissions to read and execute for user, read and write for group and read for others.</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	chmod 564 file.txt</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">9.	Assume there is a file named as “test.txt”. If you want to rename a file to demo.txt. which of the following command will be used.</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)	mv test.txt demo.txt</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">10.	Consider the following code int main()
+            {
+            fork();
+            fork();
+             
+            fork();
+            }
+            How many child process are created using above code
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>7</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">11.	Which of the following is true for the following code? int main()
+            {
+            int p; p=fork(); if(p==0)
+            {
+             
+            
+            
+            
+            }
+            else
+            {
+            
+            
+            
+            
+            
+            }
+            }
+             
+            printf("The Child Process with ID %d\n”, getpid()); printf(“My parent is having ID %d\n, getppid());
+            
+            
+            
+            
+            sleep(5);
+            printf(The Parent Process with ID %d\n", getpid()); printf</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a)	This will create a zombie process</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">12.	Which of the following is true with respect to process creation?
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	The child will run the code of another program using execl() function.</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">1. Consider a program named “read.c”. The command
+            $gcc -o read read.c
+            will create an executable file named as
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>3.	read</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">. The following code
+
+
+            int main( )
+            {
+            pid_t p, q; p=fork(); if(p = = 0)
+            {
+            q=fork();
+            }
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>2.	Creates a hierarchy of three processes</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">3.	Consider a scenario in which one parent process has single child process created by using
+            pid = fork();
+            Then the task to be performed only by the parent process should be written as:
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	if(pid>0) { //specify the task}</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">4.	What does the write() system call returns on success?</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	number of bytes actually written</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">5.	What does the open() system call returns on success?</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)	file descriptor</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">6.	Suppose a file “f1” has the following contents:
+            1234567890
+            What will be the contents of the file after this code is executed? int main()
+            {
+            char b[10]; int n;
+            n=open(“f1”,O_RDWR); read(n,b,3);
+            write(n,”OK”,2);
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)  123OK67890</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">7.	Suppose a file “f1” has the following contents:
+            1234567890
+            What will be the contents of the file after this code is executed? int main()
+            {
+            char b[10]; int n;
+            n=open(“f1”,O_RDONLY); read(n,b,3);
+            write(n,”OK”,2);
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d) 1234567890</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">8.	Suppose a file “f1” has the following contents:
+            1234567890
+            What will be the contents of the file after this code is executed? int main()
+            {
+            char b[10]; int n;
+            n=open(“f1”,O_RDWR); read(n,b,3); lseek(n,2,SEEK_CUR); write(n,b,2);
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>1234512890</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">9.	A file named "os.txt" already exists in your system. Suppose the text "An operating system (OS) is” is written into it. The code to open the file for writing “system software” in the end is</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a.	int n;
+            n=open("os.txt", O_RDWR | O_APPEND); write(n,”system software”,15);
+            </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">10.	Consider a file “F1” having some content already written into it. In order to reposition the cursorat the 10th position from the beginning which of the following code will be used.</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d)	n=open("F1",O_RDWR); lseek(n,10,SEEK_SET); </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">11.	Consider a file “F1” having the content “Operating” already written into it. In order to print “ing” on the screen which of the following code will be used.</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	int n;
+            char buff[10]; n=open(“F1”, O_RDWR); lseek(n,-4,SEEK_END); read(n,buff,3);
+            write(1,buff,3);
+            </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">12.	Consider a file named "file" having some content. Code to read 13 characters from it and print all the read characters on screen will be</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>a.)
+            char buffer[13]; fd=open("file",O_RDWR); read(fd,buffer,13);
+             
+            write(1,buffer,13); </b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">
+            13.	The following code will result in a : int main()
+            {
+            pid_t p; p=fork(); if(p==0)
+            {
+            printf(“Child process”);
+            }
+            else
+             
+            {
+            sleep(3);
+            printf("I am parent having PID %d\n",getpid());
+            }
+            }
+            
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>1.	zombie process</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">14. The system call used to make the parent process wait for the child process to finish is</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>1.	wait</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">15. Out the following which header file(s) are required for the fork() system call
+            1.	sys/types.h
+            2.	unistd.h
+            3.	stdio.h
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)	both (1) and (2)</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">16. Consider a directory D1 having a file F1. The command to delete D1 will be</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>2.	rm -r D1</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">17. The command to exit the nano editor is</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>1.	Ctrl+x</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">18. The use of sleep() function within a process makes the</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>1.	process to sleep for specified number of seconds</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">19. The system call used to reposition the cursor within the file is</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>4.	lseek </b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">20. What will be the output of the following code int main()
+            {
+            printf(“First Output”); execl(“\bn\ps”,”ps”,NULL); printf(“Second Output”):
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	First Output followed by the list of running processes</b>
+        </div>
+    </div>
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">Q21. What will be the value of the variable “f1”. The contents of the file “seeking” are 1234567890abcdefghijx1x2x3x4x5
+
+            int n,f,f1;
+            f=open("seeking",O_RDWR);//1234567890abcdefghijx1x2x3x4x5 f1=lseek(f,10,SEEK_SET);
+            printf("Pointer is at %d position\n",f1);
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>10</b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">Q. The following code will create how many child processes int main()
+{
+pid_t p,q; p=fork(); if(p==0)
+{
+ 
+    fork();
+}
+else{
+    fork();
+}
+
+</p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>3</b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">1.	What is the output of this program?
+            <header files> int main()
+            {
+            pid_t p;
+            p = fork(); printf("%d\n",p); return 0;
+             
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>c)	it will print "0" & the PID of the child process</b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">
+            2.	Which of the following code synipt is correct in order to create 7 child processes of one parent process
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d)	int main()
+            {
+            fork();
+            fork();
+            fork();
+            printf("Child Process\n"); return 0;
+            }
+            </b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">
+            3.	Which of the following is correct to read 13 characters from a file named first.txt and write into another non existing file final.txt.
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	<header files>
+            <main function> int first, final, n; char b[50];
+             
+            first= open("first.txt", O_RDONLY); n=read(first,b,13);
+            final=open("final.txt", O_CREAT | O_WRONLY); write(final,b,n);
+            </b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">4.	What is the output of this program?
+            <header files> int main()
+            {
+            fork();
+            printf("CSE325 CA1\n"); return 0;
+             
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>b)	the string "CSE325 CA1" will be printed twice</b>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body p-1">
+          <p class="card-text m-0">5.	Total how many times "CA1CSE325" will be printed?
+            <header files> int main()
+            {
+            fork();fork();printf("CA1CSE325");
+            }
+            </p>
+        </div>
+        <div class="card-body p-2">
+           Answer : <b>d)	4 times</b>
+        </div>
+    </div>
+
+
+</div>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+  <script src="cheat.js"></script>
+</body>
+</html>
